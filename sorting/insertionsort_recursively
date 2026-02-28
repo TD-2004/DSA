@@ -1,0 +1,26 @@
+public class RecursiveInsertionSort{
+    public static void insertion(int arr[],int j,int n){
+        int i=j;
+         for(i=1;i<n;i++){
+            int temp=arr[i];
+            int c=i-1;
+            while(c>=0 && arr[c]>temp){
+                arr[c+1]=arr[c];
+                c--;
+            }
+            arr[c+1]=temp;
+
+        }
+    }
+    static void display(int arr[],int m){
+            for(int i=0;i<m;i++){
+                System.out.print(arr[i]+"|");
+            }
+        }
+    
+    public static void main(String args[]){
+        int arr[]={6,5,9,7,1,2,5,3,5,7};
+        insertion(arr, 1, arr.length);
+        display(arr,arr.length);
+    }
+}
